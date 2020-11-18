@@ -1,0 +1,32 @@
+from appium import webdriver
+
+from page.base_page import BasePage
+from page.main import Main
+
+
+class App(BasePage):
+    """app启动"""
+    def start(self):
+        _app_package = 'com.tencent.wework'
+        _app_activity = '.launch.LaunchSplashActivity'
+        if self._driver is None:
+            desired_caps = {}
+            desired_caps['platformName'] = 'Android'
+            desired_caps['deviceName'] = '127.0.0.1:7555'
+            desired_caps['appPackage'] = _app_package
+            desired_caps['noReset'] = 'true'
+            desired_caps['appActivity'] = _app_activity
+
+            self._driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+            self._driver.implicitly_wait(15)
+
+        else:
+            self._driver.start_activity(_app_package, _app_activity)
+
+        """注意，这里返回self，是为了可以在test case中实现链式调用，可以实现App().start().main()"""
+        """self是指类本身，在这里就是指class App，所以这里可以实现链式调用"""
+        return self
+
+    """企业微信登录后首页"""
+    def main(self):
+        return Main(self._driver)
