@@ -1,3 +1,0 @@
-- by: xpath
-  locator: '//*[@text="编辑成员"]'
-  action: click

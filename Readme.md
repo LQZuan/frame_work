@@ -4,9 +4,9 @@
 ## 目录结构说明
 ```
 - page 
+    |- config 放置yaml数据驱动配置文件
     |- base_page.py 基类
     |- main.py 
     |- contact.py
+    |-...
 ```
-
-#### 继续更新中...

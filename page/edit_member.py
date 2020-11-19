@@ -4,5 +4,5 @@ from page.confirm import Confirm
 
 class EditMember(BasePage):
     def del_member(self):
-        self.steps("../page/del.yaml")
+        self.steps("../page/config/del.yaml")
         return Confirm(self._driver)

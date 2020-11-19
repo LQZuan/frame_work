@@ -7,7 +7,7 @@ from page.base_page import BasePage
 
 class Confirm(BasePage):
     def confirm(self, delMember):
-        self.steps("../page/confirm.yaml")
+        self.steps("../page/config/confirm.yaml")
         sleep(5)
         ele = self._driver.find_elements(MobileBy.XPATH, f'//*[@text="Abc"]/..//*[@text="{delMember}"]')
         print(ele)

@@ -4,5 +4,5 @@ from page.edit_member import EditMember
 
 class Edit(BasePage):
     def edit_member(self):
-        self.steps("../page/edit.yaml")
+        self.steps("../page/config/edit.yaml")
         return EditMember(self._driver)

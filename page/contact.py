@@ -5,9 +5,9 @@ from page.base_page import BasePage
 
 class Contact(BasePage):
     def goto_search(self):
-        self.steps("../page/contact.yaml")
+        self.steps("../page/config/contact.yaml")
         return Search(self._driver)
 
     def goto_addmember(self):
-        self.steps("../page/addmember.yaml")
+        self.steps("../page/config/addmember.yaml")
         return AddMember(self._driver)

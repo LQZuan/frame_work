@@ -1,3 +1,0 @@
-- by: xpath
-  locator: '//*[@text="确定"]'
-  action: click

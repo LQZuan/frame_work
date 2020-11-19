@@ -4,5 +4,5 @@ from page.edit import Edit
 
 class PersonalInfo(BasePage):
     def goto_edit(self):
-        self.steps("../page/person.yaml")
+        self.steps("../page/config/person.yaml")
         return Edit(self._driver)

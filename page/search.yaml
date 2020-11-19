@@ -1,8 +1,0 @@
-- by: xpath
-  locator: '//*[@text="搜索"]'
-  action: send
-  value: "{value}"
-
-- by: xpath
-  locator: '//*[@text="Abc"]/..'
-  action: click
